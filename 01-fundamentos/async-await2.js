@@ -51,8 +51,7 @@ getInformation(3)
 .catch(err => console.log(err))
 
 
-
-
+//Otra forma
 // getEmployee(3)
 // .then(employee => {
 //   getSalary(employee)
@@ -63,7 +62,7 @@ getInformation(3)
 // })
 // .catch(err => console.log(err))
 
-
+// Detecta promesas sin resolver
 // process.on('unhandledRejection', (reason, p) => {
 //   console.log('Unhandled Rejection at:', p, 'reason:', reason);
 //   // application specific logging, throwing an error, or other logic here

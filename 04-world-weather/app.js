@@ -1,4 +1,5 @@
-const place = require("./place/place");
+const place = require("./place/place")
+const weather = require("./weather/weather")
 
 const argv = require("yargs").options({
   address: {
@@ -8,5 +9,24 @@ const argv = require("yargs").options({
   }
 }).argv;
 
-place.getPlaceLatLong(argv.saddress)
-  .then(response => console.log(response))
+// place.getPlaceLatLong(argv.address)
+//   .then(response => console.log(response))
+
+// weather.getWeather(35, 139) 
+//   .then(console.log)
+//   .catch(console.log)
+
+const getInfo = async(address) => {
+  try {
+    const coord = await place.getPlaceLatLong(address)
+    const temp = await weather.getWeather(coord.latitude, coord.longitude)
+    return `El clima de ${ address } es de ${ temp }`
+
+  } catch (err ) {
+      return `No se pudo encontrar el clima para ${ address }`
+  }
+}
+
+getInfo(argv.address)
+  .then(console.log)
+  .catch(console.log)

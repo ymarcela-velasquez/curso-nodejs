@@ -37,10 +37,6 @@ app.get("/user", (req, res) => {
     })
 })
 
-
-
-
-
 //POST
 app.post("/user", (req, res) => {
   let body = req.body;

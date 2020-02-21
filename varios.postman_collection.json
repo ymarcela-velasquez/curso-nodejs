@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "3b8e94b0-f4b1-4273-b4c7-1de117fcb7c9",
+		"name": "varios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=Colombia",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "e9437c13femsh242b093b28d3b8fp1be2bfjsn6964a75495b5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=Colombia",
+					"protocol": "https",
+					"host": [
+						"devru-latitude-longitude-find-v1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"latlon.php"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Colombia"
+						}
+					]
+				},
+				"description": "Se obtiene longitud y latitud de una ciudad o país"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Lorena",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lorena@gmail.com",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API clima. api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=fdd09fe9794de34fd1f7be161f3a0c6a&units=metric",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=fdd09fe9794de34fd1f7be161f3a0c6a&units=metric",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "35"
+						},
+						{
+							"key": "lon",
+							"value": "139"
+						},
+						{
+							"key": "appid",
+							"value": "fdd09fe9794de34fd1f7be161f3a0c6a"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Curso Node. POST:create user. {{url}}/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Test16",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test16@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "SUPER_ROLE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Curso Node. PUT. {{url}}/user/5e454f6c8771ee54ac2701bf",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN_ROLE",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "144",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/5e454f6c8771ee54ac2701bf",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"5e454f6c8771ee54ac2701bf"
+					]
+				},
+				"description": "Actualiza usuario, todos los campos excepto contraseña y google"
+			},
+			"response": []
+		},
+		{
+			"name": "Curso Node. GET. http://localhost:3000",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user?pag=10&lim=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "pag",
+							"value": "10"
+						},
+						{
+							"key": "lim",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Busca todos los usuarios, especificando límite (# de registros a buscar) y pag (a partir de que registro quiero ver)."
+			},
+			"response": []
+		},
+		{
+			"name": "Curso Node. DELETE. {{url}}/user/5e4577e4ba178372270dbe11",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/5e4577e4ba178372270dbe11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"5e4577e4ba178372270dbe11"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

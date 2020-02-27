@@ -10,16 +10,19 @@ io.on("connection", client => {
     console.log("User disconnected")
   })
 
-  client.on("sendMessage", (message, callback) => {
-    if (message.user) {
-      callback({
-        response: "Everything went well"
-      })
-    } else {
-      callback({
-        response: "Everything went wrong"
-      })
-    }
+  client.on("sendMessage", (data, callback) => {
+    console.log(data);
+    client.broadcast.emit('sendMessage', data)
+    
+    // if (message.user) {
+    //   callback({
+    //     response: "Everything went well"
+    //   })
+    // } else {
+    //   callback({
+    //     response: "Everything went wrong"
+    //   })
+    // }
   })
 
   client.emit("sendMessage", {
